@@ -59,10 +59,10 @@ More data has been acquired since the geochemist completed her work — can we p
 - Plotted `holeid` along the x-axis and depth on the y-axis  
 - Created two versions: one coloured by `Pb`, one by `Class`
 
-> ![Pb values plot](images/pb_plot_placeholder.png)  
+> ![Pb values plot](images/pb_plot.png)  
 > *Figure: Drillholes coloured by Pb values*
 
-> ![Class plot](images/class_plot_placeholder.png)  
+> ![Class plot](images/class_plot.png)  
 > *Figure: Drillholes coloured by known class*
 
 ---
@@ -74,17 +74,25 @@ More data has been acquired since the geochemist completed her work — can we p
 - Iterated through Pb cut-off values to find the one best aligned with Class  
 - Pb = **160** gave the highest accuracy: **78.4%**
 
-> ![Pb cutoff comparison](images/pb_cutoff_plot_placeholder.png)  
-> *Figure: Pb cutoff classification vs actual class*
+> ![Pb cutoff comparison](images/pb_accuracy.png)  
+> *Figure: Pb cutoff accuracy test*
+>
+> ![Pb cutoff comparison](images/pb_cutoff_plot.png)  
+> *Figure: Predicted Classes using Pb cut-off 160*
 
 ---
 
 ### Weighted Scoring
 
 - Used a weighted sum of key elements (`Pb`, `Mo`, `Au`, `As`) based on correlation  
-- Elements like `S`, `Zn`, `Cu`, and `Fe` were excluded due to low correlation  
+- Elements `S`, `Zn`, `Cu`, and `Fe` were excluded due to low correlation  
 - Accuracy improved slightly to **78.91%**
 
+> ![Pb cutoff comparison](images/weighted_accuracy.png)  
+> *Figure: Weighted scoring accuracy*
+  
+> ![Pb cutoff comparison](images/weighted_plot.png)  
+> *Figure: Predicted Classes using weighted scoring*
 ---
 
 ### XGBoost
@@ -93,17 +101,23 @@ More data has been acquired since the geochemist completed her work — can we p
 - Validated using 20% random test split  
 - Accuracy improved to **84.52%**
 
-> ![XGBoost confusion matrix](images/xgboost_confusion_matrix_placeholder.png)  
+> ![XGBoost confusion matrix](images/xgboost_matrix.png)  
 > *Figure: Confusion matrix for XGBoost model*
+>
+> > ![XGBoost + Depth plot](images/xgboost_plot.png)  
+> *Figure: Predicted classes using XGBoost*
 
 ---
 
-### XGBoost + Depth
+### XGBoost + Depth Intervals
 
 - Added `depth_mid` as an additional feature to model possible spatial relationships  
 - Final model accuracy: **93.51%**
 
-> ![XGBoost + Depth plot](images/xgboost_depth_plot_placeholder.png)  
+> ![XGBoost + Depth plot](images/interval_matrix.png)  
+> *Figure: Predicted classes using depth-enhanced XGBoost model*
+>
+> > ![XGBoost + Depth plot](images/interval_plot.png)  
 > *Figure: Predicted classes using depth-enhanced XGBoost model*
 
 ---
