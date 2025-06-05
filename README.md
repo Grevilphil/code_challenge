@@ -6,15 +6,13 @@ Can we use the same geochemical data and labels to generate a predictive model f
 
 More data has been acquired since the geochemist completed her work — can we predict labels onto these data points (labelled “?”)?
 
----
+![Expert image](https://github.com/Solve-Geosolutions/coding-test/raw/main/www/an_expert_image.png)
 
 ## My Approach
 
 - Read in the data to understand its structure and content
 - Checked for errors, missing values, and outliers
 - Cleaned the data and prepared it for modelling
-
----
 
 ## Data Summary
 
@@ -40,8 +38,6 @@ More data has been acquired since the geochemist completed her work — can we p
 - 4,004 Classified data points  
 - 767 Unclassified data points
 
----
-
 ## Data Issues and Cleaning
 
 - Missing collar coordinates  
@@ -51,8 +47,6 @@ More data has been acquired since the geochemist completed her work — can we p
 - `-999` values removed  
 - Some missing values (e.g. in `As`)  
 - Not all intervals present
-
----
 
 ## Visualisation
 
@@ -64,8 +58,6 @@ More data has been acquired since the geochemist completed her work — can we p
 
 > ![Class plot](images/class_plot.png)  
 > *Figure: Drillholes coloured by known class*
-
----
 
 ## Analysis
 
@@ -80,8 +72,6 @@ More data has been acquired since the geochemist completed her work — can we p
 > ![Pb cutoff comparison](images/pb_cutoff_plot.png)  
 > *Figure: Predicted Classes using Pb cut-off 160*
 
----
-
 ### Weighted Scoring
 
 - Used a weighted sum of key elements (`Pb`, `Mo`, `Au`, `As`) based on correlation  
@@ -93,7 +83,6 @@ More data has been acquired since the geochemist completed her work — can we p
   
 > ![Pb cutoff comparison](images/weighted_plot.png)  
 > *Figure: Predicted Classes using weighted scoring*
----
 
 ### XGBoost
 
@@ -107,8 +96,6 @@ More data has been acquired since the geochemist completed her work — can we p
 > > ![XGBoost + Depth plot](images/xgboost_plot.png)  
 > *Figure: Predicted classes using XGBoost*
 
----
-
 ### XGBoost + Depth Intervals
 
 - Added `depth_mid` as an additional feature to model possible spatial relationships  
@@ -119,8 +106,6 @@ More data has been acquired since the geochemist completed her work — can we p
 >
 > > ![XGBoost + Depth plot](images/interval_plot.png)  
 > *Figure: Predicted classes using depth-enhanced XGBoost model*
-
----
 
 ## Further Improvements
 
