@@ -101,14 +101,14 @@ More data has been acquired since the geochemist completed her work — can we p
 
 ### XGBoost + Depth Intervals
 
-- Added `depth_mid` as an additional feature to model possible spatial relationships  
+- Added depth interval as an additional feature to model spatial relationships  
 - Final model accuracy: **93.51%**
 
 > ![XGBoost + Depth plot](images/interval_matrix.png)  
-> *Figure: Predicted classes using depth-enhanced XGBoost model*
+> *Figure: Predicted classes using XGBoost model with depth intervals*
 >
 > > ![XGBoost + Depth plot](images/interval_plot.png)  
-> *Figure: Predicted classes using depth-enhanced XGBoost model*
+> *Figure: Predicted classes using XGBoost model with depth intervals*
 
 ## Further Improvements
 
