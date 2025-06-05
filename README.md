@@ -8,13 +8,11 @@ Can we use the same geochemical data and labels to generate a predictive model f
 
 More data has been acquired since the geochemist completed her work — can we predict labels onto these data points (labelled “?”)?
 
-## My Approach
+## Read Data
 
-- Read in the data to understand its structure and content
-- Checked for errors, missing values, and outliers
-- Cleaned the data and prepared it for modelling
-
-## Data Summary
+- Understand its structure and content
+- Check for errors, missing values, and outliers
+- Clean the data and prepare it for modelling
 
 **Fields (type):**
 
@@ -38,11 +36,16 @@ More data has been acquired since the geochemist completed her work — can we p
 - 4,004 Classified data points  
 - 767 Unclassified data points
 
-## Data Issues and Cleaning
+**Notes:**
+- Missing collar coordinates  
+- Missing units
+- Some missing values (`As` Missing 1503 values)  
+- Not all intervals present
 
+**QAQC:**
 - Missing collar coordinates  
 - Missing units  
-- `<0.005` in `Au` → replaced with half detection limit `0.0025`  
+- `<0.005` in `Au` replaced with half detection limit `0.0025`  
 - `Au` converted from object to float  
 - `-999` values removed  
 - Some missing values (e.g. in `As`)  
