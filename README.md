@@ -101,7 +101,7 @@ More data has been acquired since the geochemist completed her work — can we p
 
 ### XGBoost + Depth Intervals
 
-- Added depth interval as an additional feature to model spatial relationships  
+- Added depth interval as an additional parameter to model spatial relationships  
 - Final model accuracy: **93.51%**
 
 > ![XGBoost + Depth plot](images/interval_matrix.png)  
