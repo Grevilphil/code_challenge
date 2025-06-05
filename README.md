@@ -4,9 +4,9 @@
 
 Can we use the same geochemical data and labels to generate a predictive model for future drill holes which can label samples on whether they are in class A or class B?
 
-More data has been acquired since the geochemist completed her work — can we predict labels onto these data points (labelled “?”)?
-
 ![Expert image](https://github.com/Solve-Geosolutions/coding-test/raw/main/www/an_expert_image.png)
+
+More data has been acquired since the geochemist completed her work — can we predict labels onto these data points (labelled “?”)?
 
 ## My Approach
 
