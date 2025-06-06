@@ -112,7 +112,7 @@ More data has been acquired since the geochemist completed her work — can we p
 
 ## Further Improvements
 
-- Apply collar location to plot drillholes in 3D space  
+- Apply collar location to plot drillholes in 3D space and better understand spatial relationships
 - Validate models by removing entire drillholes instead of random samples  
 - Compare with other ML methods (e.g. Random Forest, SVM)  
 - Include geological data such as lithology, alteration, and structure
